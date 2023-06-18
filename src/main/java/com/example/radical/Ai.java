@@ -8,7 +8,7 @@ public class Ai {
     @GetMapping("/Ai")
     public String dataScience()
     {
-        return "learned Ai now";
+        return "for conflict commited code from github";
     }
 }
 
