@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class datascience {
-    @GetMapping("/datascience")
+    @GetMappi:ng("/datascience")
     public String dataScience()
     {
         return "learned datascience now";
