@@ -5,26 +5,14 @@ pipeline {
 
     agent any
 
-    tools {
-         maven 'Maven3.8.8'
-    }
-
-    stages {
-        stage('Code Compilation') {
-            steps {
-                echo 'code compilation is starting'
-                sh 'mvn clean compile'
-				echo 'code compilation is completed'
-            }
+      tools {
+        maven 'maven-3.8.8'
+      }
+      stages {
+        stage ('Build') {
+          steps {
+            sh 'mvn clean package'
+          }
         }
 
-        stage('Code Package') {
-            steps {
-                echo 'code packing is starting'
-                sh 'mvn clean package'
-				echo 'code packing is completed'
-            }
-        }
-
-    }
 }
