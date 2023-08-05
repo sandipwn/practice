@@ -29,8 +29,8 @@ pipeline {
         stage('Building & Tag Docker Image') {
                     steps {
                         echo 'Starting Building Docker Image'
-                        sh 'docker build -t sandipwn/travelbooking-ms .'
-                        sh 'docker build -t travelbooking-ms .'
+                        sh 'docker build -t sandipnaikwade/demo .'
+                        sh 'docker build -t demo .'
                         echo 'Completed  Building Docker Image'
                     }
         }
