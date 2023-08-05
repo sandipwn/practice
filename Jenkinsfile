@@ -29,7 +29,7 @@ pipeline {
         stage('Building & Tag Docker Image') {
                     steps {
                         echo 'Starting Building Docker Image'
-                        sh 'docker build -t sandipwn/radical-ms .'
+                        sh 'docker build -t sandipnaikwade/radical-ms .'
                         sh 'docker build -t radical-ms .'
                         echo 'Completed  Building Docker Image'
                     }
@@ -47,7 +47,7 @@ pipeline {
                          withCredentials([string(credentialsId: 'dockerhubCred', variable: 'dockerhubCred')]){
                          sh 'docker login docker.io -u sandipnaikwade -p ${dockerhubCred}'
                          echo "Push Docker Image to DockerHub : In Progress"
-                         sh 'docker push sandipwn/radical-ms:latest'
+                         sh 'docker push sandipnaikwade/radical-ms:latest'
                          echo "Push Docker Image to DockerHub : In Progress"
                          sh 'whoami'
                          }
