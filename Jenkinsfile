@@ -57,6 +57,7 @@ pipeline {
         stage(' Docker Image Push to Amazon ECR') {
                    steps {
                       script {
+                         eval $(aws ecr get-login --no-include-email | sed ‘s|https://||’)
                          withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',credentialsId:'ecr-credentials', url:"336363707015.dkr.ecr.ap-south-1.amazonaws.com/radical-ms"]]){
                          sh """
                          echo "List the docker images present in local"
