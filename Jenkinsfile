@@ -26,6 +26,15 @@ pipeline {
 				echo 'code packing is completed'
             }
         }
+        stage('Building & Tag Docker Image') {
+                    steps {
+                        echo 'Starting Building Docker Image'
+                        sh 'docker build -t sandipwn/travelbooking-ms .'
+                        sh 'docker build -t travelbooking-ms .'
+                        echo 'Completed  Building Docker Image'
+                    }
+        }
+
     }
 }
 
