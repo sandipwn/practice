@@ -57,7 +57,7 @@ pipeline {
         stage(' Docker Image Push to Amazon ECR') {
                    steps {
                       script {
-                         withCredentials([credentialsId:'ecr:ap-south-1:ecr-credentials', url:"336363707015.dkr.ecr.ap-south-1.amazonaws.com/radical"]){
+                         withCredentials([credentialsId:'ecr-credentials', url:"336363707015.dkr.ecr.ap-south-1.amazonaws.com/radical"]){
                          sh """
                          echo "List the docker images present in local"
                          docker images
