@@ -45,9 +45,9 @@ pipeline {
                    steps {
                       script {
                          withCredentials([string(credentialsId: 'dockerhubCred', variable: 'dockerhubCred')]){
-                         sh 'docker login docker.io -u sandipwn -p ${dockerhubCred}'
+                         sh 'docker login hub.docker.com -u sandipnaikwade -p ${dockerhubCred}'
                          echo "Push Docker Image to DockerHub : In Progress"
-                         sh 'docker push sandipwn/radical-ms:latest'
+                         sh 'docker push sandipnaikwade/demo:latest'
                          echo "Push Docker Image to DockerHub : In Progress"
                          sh 'whoami'
                          }
