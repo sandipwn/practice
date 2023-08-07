@@ -85,7 +85,14 @@ pipeline {
                          }
                       }
                     }
-                }
+         }
+         stage('Delete docker image from Jenkins'){
+                     steps{
+                         script{
+                         sh 'docker rmi -f $(docker images -q)'
+                         }
+                     }
+         }
     }
 }
 
