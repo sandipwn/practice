@@ -87,10 +87,10 @@ pipeline {
                    steps {
                       script {
                          withCredentials([usernamePassword(credentialsId: 'nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
-                         sh 'docker login http://3.110.209.226:8085/repository/radical-ms/ -u admin -p ${PASSWORD}'
+                         sh 'docker login http://65.1.94.236:8085/repository/radical-ms/ -u admin -p ${PASSWORD}'
                          echo "Push Docker Image to Nexus : In Progress"
-                         sh 'docker tag radical-ms:latest 3.110.209.226:8085/radical-ms:latest'
-                         sh 'docker push 3.110.209.226:8085/radical-ms:latest'
+                         sh 'docker tag radical-ms:latest 65.1.94.236:8085/radical-ms:latest'
+                         sh 'docker push 65.1.94.236:8085/radical-ms:latest'
                          echo "Push Docker Image to Nexus : Completed"
                          }
                       }
