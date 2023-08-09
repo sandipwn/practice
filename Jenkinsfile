@@ -78,6 +78,7 @@ pipeline {
                                         docker tag python-docker-img:latest 336363707015.dkr.ecr.ap-south-1.amazonaws.com/radical-ms:latest
                                         docker push 336363707015.dkr.ecr.ap-south-1.amazonaws.com/radical-ms:latest
                                         """
+                                        }
                            }
 
                        }
