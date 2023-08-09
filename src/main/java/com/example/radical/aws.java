@@ -8,6 +8,6 @@ public class aws {
     @GetMapping("/aws")
     public String aws()
     {
-        return "route53,ec2,lambda,efs,new changes for maven,new changes for cicd2";
+        return "route53,ec2,lambda,efs,new changes for maven,new changes for cicd2..";
     }
 }
