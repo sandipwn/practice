@@ -8,6 +8,6 @@ public class datascience {
     @GetMapping("/datascience")
     public String dataScience()
     {
-        return "learned datascience now hi";
+        return "learned datascience now test";
     }
 }
