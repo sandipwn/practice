@@ -1,5 +1,5 @@
 pipeline{
-    Stages{
+    stages{
        stage('Code Compilation'){
          steps{
             sh 'mvn clean compile'
