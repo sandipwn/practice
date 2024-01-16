@@ -14,7 +14,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: "52 15 * * 2"  # Run at 6am on Saturday
+    - cron: "55 15 * * 2"  # Run at 6am on Saturday
 jobs:
   build:
     
