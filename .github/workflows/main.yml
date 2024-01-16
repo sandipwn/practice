@@ -1,0 +1,15 @@
+name: Scheduled Workflow
+
+on:
+  schedule:
+    - cron: '02 16 * * 2'  # Run at 6am on Saturday
+
+jobs:
+  my-scheduled-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add your other steps here
