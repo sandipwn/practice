@@ -18,7 +18,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR file from the build stage
-COPY --from=build /target/radical*.jar .
+COPY --from=build ./target/radical*.jar .
 
 # Specify the command to run the application
 CMD ["java", "-jar", "myapp.jar"]
