@@ -40,7 +40,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push Docker images
+    - name: Build and push Docker imagess
       uses: docker/build-push-action@v6.3.0
       with:
         context: .
